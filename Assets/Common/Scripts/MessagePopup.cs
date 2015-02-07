@@ -36,12 +36,22 @@ public class MessagePopup : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if(!m_insideTrigger) return;
+
+        if( Input.GetKeyDown(KeyCode.F))
         {
             if(m_receiver != null)
             {
                 m_receiver.SendMessage(m_function, null, SendMessageOptions.DontRequireReceiver);
             }
+
+            StartCoroutine(WinGame());
         }
+    }
+
+    private IEnumerator WinGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Application.LoadLevelAsync(2);
     }
 }
