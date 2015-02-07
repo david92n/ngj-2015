@@ -8,12 +8,27 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402748}
-  - 61: {fileID: 6102748}
+  - 58: {fileID: 5896052}
   - 50: {fileID: 5002748}
   - 212: {fileID: 21202748}
   - 114: {fileID: 11471894}
   m_Layer: 0
   m_Name: pref_player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &184344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 484344}
+  m_Layer: 0
+  m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +43,21 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 484344}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &484344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.0649999976, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 402748}
   m_RootOrder: 0
 --- !u!50 &5002748
 Rigidbody2D:
@@ -41,21 +69,21 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!61 &6102748
-BoxCollider2D:
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+--- !u!58 &5896052
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102748}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e9ab76bfb346e4f4493dc23a930b4a07, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .129999995, y: .129999995}
+  m_Radius: .0799999982
   m_Center: {x: 0, y: 0}
 --- !u!114 &11471894
 MonoBehaviour:
@@ -68,6 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe253c1bcd0bdb4ead38ea8ef6164ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_speed: 5
+  m_jumpForce: 300
+  m_groundCheck: {fileID: 484344}
+  m_groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &21202748
 SpriteRenderer:
   m_ObjectHideFlags: 1
