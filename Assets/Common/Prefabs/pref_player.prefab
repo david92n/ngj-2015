@@ -9,10 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 402748}
   - 58: {fileID: 5896052}
+  - 61: {fileID: 6187518}
   - 50: {fileID: 5002748}
   - 212: {fileID: 21202748}
   - 114: {fileID: 11471894}
-  - 95: {fileID: 9551104}
+  - 95: {fileID: 9560474}
   m_Layer: 0
   m_Name: pref_player
   m_TagString: Player
@@ -42,8 +43,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -5.94999981, y: -8.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484344}
   m_Father: {fileID: 0}
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.0649999976, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 402748}
@@ -72,7 +73,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
 --- !u!58 &5896052
@@ -84,9 +85,20 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: e9ab76bfb346e4f4493dc23a930b4a07, type: 2}
   m_IsTrigger: 0
-  m_Radius: .0799999982
-  m_Center: {x: 0, y: 0}
---- !u!95 &9551104
+  m_Radius: .899999976
+  m_Center: {x: 0, y: .899999976}
+--- !u!61 &6187518
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102748}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1.79999995, y: 3.0999999}
+  m_Center: {x: 0, y: 2.45000005}
+--- !u!95 &9560474
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -98,7 +110,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2260bc5116084cc429aa4e8b207b8f83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11471894
@@ -112,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe253c1bcd0bdb4ead38ea8ef6164ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 5
-  m_jumpForce: 300
+  m_speed: 10
+  m_jumpForce: 600
   m_groundCheck: {fileID: 484344}
   m_groundLayers:
     serializedVersion: 2
@@ -138,7 +150,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300014, guid: a721b27db3556014197ee6127c69c77b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

@@ -93,12 +93,16 @@ public class PlayerController : MonoBehaviour
 		if (input > 0.1)
 		{
 			m_inputDirection = InputDirection.RIGHT;
-			transform.localScale.Set( 1, 1, 1 );
+			Vector2 scale = transform.localScale;
+            scale.x = -1.0f;
+            transform.localScale = scale;
 		}
 		else if(input < -0.1)
 		{
-			m_inputDirection = InputDirection.LEFT;
-			transform.localScale.Set( -1, 1, 1 );
+            m_inputDirection = InputDirection.LEFT;
+			Vector2 scale = transform.localScale;
+            scale.x = 1.0f;
+            transform.localScale = scale;
 		}
 		else
 		{
