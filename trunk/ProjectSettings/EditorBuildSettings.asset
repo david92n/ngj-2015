@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Common/Scenes/AmigaIntro.unity
   - enabled: 1
-    path: Assets/Common/Scenes/DavidTestScene.unity
+    path: Assets/Common/Scenes/Screen01.unity
