@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 83073c73217e13b4db51d4a9d5f3892b
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_pixelColorDistortionShader: {fileID: 4800000, guid: 55290ccd22dc95246962f75f4ae6e312,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
