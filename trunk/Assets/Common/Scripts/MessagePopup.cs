@@ -22,14 +22,18 @@ public class MessagePopup : MonoBehaviour
         if(textObject != null) m_text = textObject.GetComponent<Text>();
     }
 
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.CompareTag("Player")) return;
+
         if(m_text != null) m_text.text = m_message;
         m_insideTrigger = true;
     }
 
-    private void OnTriggerExit2D()
+    private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.CompareTag("Player")) return;
+
         if (m_text != null) m_text.text = "";
         m_insideTrigger = false;
     }
@@ -52,6 +56,11 @@ public class MessagePopup : MonoBehaviour
     private IEnumerator WinGame()
     {
         yield return new WaitForSeconds(0.5f);
+
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("DontDestroyOnLoad");
+        for (int i = 0; i < objects.Length; ++i)
+            Destroy(objects[i]);
+
         Application.LoadLevelAsync(2);
     }
 }
