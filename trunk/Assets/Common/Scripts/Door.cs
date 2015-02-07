@@ -41,12 +41,19 @@ public class Door : MonoBehaviour
             m_normalObject.SetActive(false);
 
             if(m_blowDoor != null) AudioSource.PlayClipAtPoint(m_blowDoor, Vector3.zero);
-            
+
+            StartCoroutine(NextLevel());
         }
     }
 
     private void OnTriggerEnter2D()
     {
         BlowDoor();
+    }
+
+    private IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Application.LoadLevelAsync("Screen02");
     }
 }
