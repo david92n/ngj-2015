@@ -42,7 +42,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c21476f5ac77404a883b1f9ea1e06ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pickup: {fileID: 8300000, guid: e2ee603fc7ffcfa43a60b3af801216d3, type: 3}
 --- !u!212 &21277940
 SpriteRenderer:
   m_ObjectHideFlags: 1

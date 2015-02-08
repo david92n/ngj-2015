@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start ()
 	{
-		m_animator = GetComponent<Animator>();
+		m_animator = GetComponentInChildren<Animator>();
 	}
 	
 	void FixedUpdate ()
