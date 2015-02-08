@@ -94,9 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 177940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0b651fcb2567d4e8080160515c0d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_splatter: {fileID: 0}
+  m_swishClip: {fileID: 0}
 --- !u!212 &21277940
 SpriteRenderer:
   m_ObjectHideFlags: 1
