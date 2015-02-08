@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   intensity: 2.91000009
-  chromaticAberration: .200000003
+  chromaticAberration: .800000012
   axialAberration: .5
   blur: 0
   blurSpread: .75
