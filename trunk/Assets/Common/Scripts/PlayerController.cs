@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
 
 	void UpdateAnimationVariables()
 	{
+		//m_animator.SetBool( "SwordPickup", false );
 		m_animator.SetFloat( "Velocity_Horizontal", rigidbody2D.velocity.x );
 		m_animator.SetFloat( "Velocity_Vertical", m_grounded ? 0.0f : rigidbody2D.velocity.y);
 	}
