@@ -131,4 +131,34 @@ public class PlayerController : MonoBehaviour
 		m_animator.SetFloat( "Velocity_Horizontal", rigidbody2D.velocity.x );
 		m_animator.SetFloat( "Velocity_Vertical", m_grounded ? 0.0f : rigidbody2D.velocity.y);
 	}
+
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		
+		if(coll.gameObject.GetComponent<Boulder>() != null)
+		{
+			
+			//print("Die");
+			if(!m_dying)
+				StartCoroutine( LooseGame() );
+		}
+	}
+
+	private bool m_dying = false;
+
+	private IEnumerator LooseGame()
+	{
+		m_dying = true;
+		print( "Die" );
+		yield return new WaitForSeconds( 0.0f );
+
+		GameObject[] objects = GameObject.FindGameObjectsWithTag( "DontDestroyOnLoad" );
+		
+		for( int i = 0; i < objects.Length; ++i )
+			Destroy( objects[i] );
+
+
+		Application.LoadLevelAsync("Loosing");
+
+	}
 }
