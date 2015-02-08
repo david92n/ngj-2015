@@ -33,3 +33,5 @@ EditorBuildSettings:
     path: Assets/Common/Scenes/Screen10.unity
   - enabled: 1
     path: Assets/Common/Scenes/Screen11.unity
+  - enabled: 1
+    path: Assets/Common/Scenes/Loosing.unity

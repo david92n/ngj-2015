@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
 	
 	void FixedUpdate ()
     {
+		if (m_dying == true)
+			return;
+
 		SetGrounded(Physics2D.OverlapCircle( m_groundCheck.position, 0.2f, m_groundLayers ));
 
 		float move = GetHorizontalInput();
@@ -119,6 +122,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+		if (m_dying == true)
+			return;
+
         if (m_grounded && Input.GetButtonDown("Jump"))
         {
 	        Jump();
@@ -151,8 +157,11 @@ public class PlayerController : MonoBehaviour
 	{
 		m_dying = true;
 		print( "Die" );
-		yield return new WaitForSeconds( 0.0f );
+		rigidbody2D.isKinematic = true;
+		var psGO = gameObject.GetComponentInChildren<ParticleSystem>();
+		psGO.Play();
 
+		yield return new WaitForSeconds( 2.0f );
 		GameObject[] objects = GameObject.FindGameObjectsWithTag( "DontDestroyOnLoad" );
 		
 		for( int i = 0; i < objects.Length; ++i )
