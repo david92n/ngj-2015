@@ -569,7 +569,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1978369319}
   - 212: {fileID: 1978369317}
-  - 95: {fileID: 1978369318}
   m_Layer: 0
   m_Name: winninganimation
   m_TagString: Untagged
@@ -599,21 +598,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 41c3fe36e1b257a41810f78679feb0d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!95 &1978369318
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1978369316}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70921bc1ec07eab428b4c40ccd466927, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1978369319
 Transform:
   m_ObjectHideFlags: 0
