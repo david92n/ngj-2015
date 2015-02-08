@@ -180,11 +180,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 62194133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0b651fcb2567d4e8080160515c0d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_splatter: {fileID: 0}
-  m_swishClip: {fileID: 0}
+  m_splatter: {fileID: 185180, guid: 5955a89e027946048810e6387000ad11, type: 2}
+  m_swishClip: {fileID: 8300000, guid: e2ee603fc7ffcfa43a60b3af801216d3, type: 3}
 --- !u!95 &62194140
 Animator:
   serializedVersion: 3
@@ -212,7 +212,7 @@ GameObject:
   - 68: {fileID: 104076856}
   m_Layer: 9
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Snail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2133,6 +2133,7 @@ MonoBehaviour:
   - Please, young adventurer. Seek my name! Seek the truth!
   - "You must find it! The people might have forgotten but\r\nthe rock has not..."
   - Goodbye, young adventurer. Pray we meet again soon.
+  - Press "F" for friendship
 --- !u!1 &1711677771
 GameObject:
   m_ObjectHideFlags: 0
