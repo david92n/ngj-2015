@@ -34,6 +34,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Common/Scenes/Screen11.unity
   - enabled: 1
+    path: Assets/Common/Scenes/Screen12.unity
+  - enabled: 1
     path: Assets/Common/Scenes/Loosing.unity
   - enabled: 1
     path: Assets/Common/Scenes/FinalEnding.unity
