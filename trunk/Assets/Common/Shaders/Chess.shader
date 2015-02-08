@@ -1,58 +1,89 @@
-﻿Shader "ImageEffect/PixelColorDistort" 
+﻿Shader "Sprites/Chess"
 {
-	Properties 
+	Properties
 	{
-		_MainTex ("Base (RGB)", 2D) = "" {}
-	}
-	// Shader code pasted into all further CGPROGRAM blocks
-	CGINCLUDE
-		
-	#include "UnityCG.cginc"
-	
-	struct v2f 
-	{
-		float4 pos : SV_POSITION;
-		float2 uv : TEXCOORD0;
-		float2 uv2 : TEXCOORD1;
-	};
-	
-	sampler2D _MainTex;
-
-	v2f vert( appdata_img v ) 
-	{
-		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-		o.uv.xy =  v.texcoord.xy;
-		return o; 
-	}
-	
-
-
-	half4 frag(v2f i) : SV_Target 
-	{
-		half4 color = tex2D(_MainTex, i.uv.xy);
-		
-		return color;
+		// Colors
+		_col0	("First Color", Color)		= (1,0,0,1)	// Red
+		_col1	("Second Color", Color)		= (0,1,0,1)	// Green
+		_size	("size", float) = 0.06
+		_time	("speed", float) = 1
 	}
 
-	ENDCG
+	SubShader
+	{
+		Tags
+		{ 
+			"Queue"="Transparent" 
+			"IgnoreProjector"="True" 
+			"RenderType"="Transparent" 
+			"PreviewType"="Plane"
+			"CanUseSpriteAtlas"="True"
+		}
+
+		Cull Off
+		Lighting Off
+		ZWrite Off
+		Fog { Mode Off }
+		Blend One OneMinusSrcAlpha
+
+		Pass
+		{
+		CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			#pragma multi_compile DUMMY PIXELSNAP_ON
+			#include "UnityCG.cginc"
+			
+			struct appdata_t
+			{
+				float4 vertex   : POSITION;
+				float4 color    : COLOR;
+				float2 texcoord : TEXCOORD0;
+			};
+
+			struct v2f
+			{
+				float4 vertex   : SV_POSITION;
+				fixed4 color    : COLOR;
+				half2 texcoord  : TEXCOORD0;
+			};
+			
+			float4 _col0;
+			float4 _col1;
+			float _size;
+			float _time;
+
+			v2f vert(appdata_t IN)
+			{
+				v2f OUT;
+				OUT.vertex = mul(UNITY_MATRIX_MVP, IN.vertex);
+				OUT.texcoord = IN.texcoord + float2(_Time.y, _Time.y) * _time;
+				#ifdef PIXELSNAP_ON
+				OUT.vertex = UnityPixelSnap (OUT.vertex);
+				#endif
+
+				return OUT;
+			}
+
+			fixed4 frag(v2f IN) : SV_Target
+			{
+				
+				float2 uv = IN.texcoord;
+				float4 color = _col0;
+				float _t1 = _size/2.0;
+				if((uv.x % _size<_t1== uv.y % _size <_t1))
+						color = _col1;
+						//aqui prueba
 	
-Subshader 
-{
- Blend One Zero
- Pass {
-	  ZTest Always Cull Off ZWrite Off
-	  Fog { Mode off }      
+				else{
+					color = _col0;
+	
+				}
 
-      CGPROGRAM
-      #pragma fragmentoption ARB_precision_hint_fastest
-      #pragma vertex vert
-      #pragma fragment frag
-      
-      ENDCG
-  } // Pass
-} // Subshader
-
-Fallback off
-
-} // shader
+				//return
+				return color;
+			}
+		ENDCG
+		}
+	}
+}

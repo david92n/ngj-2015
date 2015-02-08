@@ -18,7 +18,7 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 2800000, guid: 654b555e7ef41e04d87742d15976cb97, type: 3}
-          m_Scale: {x: .100000001, y: .100000001}
+          m_Scale: {x: 1, y: 3245}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -27,9 +27,37 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-    m_Floats: {}
+    m_Floats:
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _t0
+        second: .0399999991
+      data:
+        first:
+          name: _t1
+        second: .100000001
+      data:
+        first:
+          name: _size
+        second: .0599999987
+      data:
+        first:
+          name: _time
+        second: .0149999997
     m_Colors:
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _col0
+        second: {r: 1, g: .733333349, b: .192156866, a: 1}
+      data:
+        first:
+          name: _col1
+        second: {r: .913725495, g: .450980395, b: .0745098069, a: 1}
