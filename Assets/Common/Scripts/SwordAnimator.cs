@@ -53,12 +53,14 @@ public class SwordAnimator : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
+		if( other.CompareTag( "Snail" ) )
+			print( "TriggerENTER" );
 		CheckCollision(other);
 	}
 
 	private void CheckCollision(Collider2D other)
 	{
-		if (other.gameObject.CompareTag("Snail") && m_isSlashing)
+		if (other.gameObject.CompareTag("Snail") && (m_isSlashing || m_slash) )
 		{
 			print("HIT SNAIL");
 			GameObject.Instantiate(m_splatter);
@@ -69,6 +71,8 @@ public class SwordAnimator : MonoBehaviour {
 
 	private void OnTriggerStay2D( Collider2D other )
 	{
+		if(other.CompareTag("Snail"))
+			print( "TriggerStay" );
 		CheckCollision( other );
 	}
 
