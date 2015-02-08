@@ -8,9 +8,31 @@ public class SnailMusic : MonoBehaviour
 
 	void Awake() 
     {
-        print("HEJ");
+        StartCoroutine(FadeMusic());
+	}
+
+    private IEnumerator FadeMusic()
+    {
         GameObject musicObject = GameObject.Find("Music");
         if(musicObject != null)
-            musicObject.GetComponent<AudioSource>().clip = m_snailMusic;
-	}
+        {
+            AudioSource audio = musicObject.GetComponent<AudioSource>();
+            
+            while (audio.volume > 0.0f)
+            {
+                audio.volume = Mathf.MoveTowards(audio.volume, 0.0f, Time.deltaTime);
+                yield return null;
+            }
+
+            audio.clip = m_snailMusic;
+            audio.loop = true;
+            audio.Play();
+
+            while(audio.volume < 1.0f)
+            {
+                audio.volume = Mathf.MoveTowards(audio.volume, 1.0f, Time.deltaTime);
+                yield return null;
+            }
+        }
+    }
 }
