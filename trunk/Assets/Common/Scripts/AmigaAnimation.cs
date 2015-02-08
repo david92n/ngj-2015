@@ -184,7 +184,7 @@ Nordic Game Jam Disk. Release 2.5.12 version 20.15";
 All rights reserved.
 Release 2.5
 Nordic Game Jam Disk. Release 2.5.12 version 20.15
-AutoExec ""Cocainum""";
+Bøgstugan detected. Deleting Bøgstugan. Starting Cocainum";
 
 		Vector3 pos = amiga_cursor.position;
 		pos.y = 9.76f - 1.3f;
