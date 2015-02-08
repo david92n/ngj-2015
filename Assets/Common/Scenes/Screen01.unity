@@ -293,6 +293,7 @@ MonoBehaviour:
   m_message: Press "f" to open door
   m_receiver: {fileID: 848101052}
   m_function: OpenDoor
+  m_text: {fileID: 0}
 --- !u!61 &169832602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -722,79 +723,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 44ca582e05c3a3e44b34174720455606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &495383131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 495383135}
-  - 114: {fileID: 495383134}
-  - 114: {fileID: 495383133}
-  - 114: {fileID: 495383132}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &495383132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 495383131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
---- !u!114 &495383133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 495383131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_AllowActivationOnMobileDevice: 0
---- !u!114 &495383134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 495383131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &495383135
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 495383131}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &770039955
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +795,7 @@ Transform:
   - {fileID: 276963537}
   - {fileID: 877245011}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &848101052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1163,7 @@ GameObject:
   - 4: {fileID: 1071991248}
   - 82: {fileID: 1071991247}
   - 114: {fileID: 1071991246}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Music
   m_TagString: DontDestroyOnLoad
   m_Icon: {fileID: 0}
@@ -1322,7 +1250,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!1 &1107557862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,45 +1405,6 @@ Prefab:
   m_RootGameObject: {fileID: 169832599}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1379062006
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1379062008}
-  - 114: {fileID: 1379062007}
-  m_Layer: 0
-  m_Name: GameState
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1379062007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1379062006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b24c1aa960e84ff40923391625a7d39f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1379062008
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1379062006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!1 &1480240856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1482,7 @@ MonoBehaviour:
   m_message: Press "f" to win
   m_receiver: {fileID: 0}
   m_function: 
+  m_text: {fileID: 0}
 --- !u!61 &1488404240
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1615,7 +1505,7 @@ GameObject:
   - 224: {fileID: 1579116627}
   m_Layer: 5
   m_Name: Dialouge
-  m_TagString: Untagged
+  m_TagString: MessagePopup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1833,7 +1723,7 @@ GameObject:
   - 114: {fileID: 1820694223}
   m_Layer: 5
   m_Name: Text
-  m_TagString: MessagePopup
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1867,7 +1757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 84aa526f6e7c2fc4a895eaf5f28dcda9, type: 3}
     m_FontSize: 10
@@ -2241,6 +2131,7 @@ GameObject:
   - 114: {fileID: 2045262781}
   - 114: {fileID: 2045262780}
   - 114: {fileID: 2045262784}
+  - 114: {fileID: 2045262785}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: DontDestroyOnLoad
@@ -2329,5 +2220,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f72c292a11a21c4bae9e9d7699fee38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2045262785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2045262779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f1d1486e4179242942cb5e822d5852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
