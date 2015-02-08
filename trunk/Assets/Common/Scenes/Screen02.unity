@@ -905,7 +905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   intensity: 2.91000009
-  chromaticAberration: .200000003
+  chromaticAberration: .800000012
   axialAberration: .5
   blur: 0
   blurSpread: .75
@@ -2548,6 +2548,10 @@ Prefab:
     - target: {fileID: 402748, guid: 963471688df94834da0568d73be80f63, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402748, guid: 963471688df94834da0568d73be80f63, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 963471688df94834da0568d73be80f63, type: 2}
