@@ -116,7 +116,6 @@ public class AmigaAnimation : MonoBehaviour
 			sr.color = col;
 			CocainumSprite();
 		}
-		Debug.Log(audio.time);
 	}
 
 	public void PlayMusic()
