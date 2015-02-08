@@ -251,6 +251,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 307319969}
   - 212: {fileID: 307319970}
+  - 114: {fileID: 307319971}
   m_Layer: 0
   m_Name: citizen
   m_TagString: Untagged
@@ -292,6 +293,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e04331540ffcd2459c23cdeef6ecc2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &307319971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 307319968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acc1d6beaf986549bec6a6643021966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &377868499
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +689,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 523c02b2d831e5c4ca0b5b0b0134be88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1043762466
@@ -967,6 +979,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1085584897}
   - 212: {fileID: 1085584898}
+  - 114: {fileID: 1085584899}
   m_Layer: 0
   m_Name: citizen
   m_TagString: Untagged
@@ -1008,6 +1021,17 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 14149b4b7f851024f81ccca7238bf0d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1085584899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085584896}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acc1d6beaf986549bec6a6643021966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1172972328
 GameObject:
   m_ObjectHideFlags: 0

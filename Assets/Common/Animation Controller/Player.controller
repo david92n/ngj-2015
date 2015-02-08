@@ -56,6 +56,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: SwordPickup
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -416,18 +422,18 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110266916
+--- !u!1102 &110252914
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: anim_player_fall
+  m_Name: New State
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 1a71402c8b4125a43bb2a52174f53d68, type: 2}
+  - {fileID: 0}
   m_ParentStateMachine: {fileID: 110747418}
-  m_Position: {x: -373, y: -139, z: 0}
+  m_Position: {x: -120, y: -204, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -446,21 +452,6 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110294742
-State:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: anim_player_jump
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Motions:
-  - {fileID: 7400000, guid: 0c82efb24bcaf0f4c8d243dc7724f4eb, type: 2}
-  m_ParentStateMachine: {fileID: 110747418}
-  m_Position: {x: -408, y: -204, z: 0}
-  m_IKOnFeet: 0
-  m_Mirror: 0
-  m_Tag: 
 --- !u!1107 &110747418
 StateMachine:
   serializedVersion: 2
@@ -474,40 +465,36 @@ StateMachine:
   - {fileID: 110203962}
   - {fileID: 110236128}
   - {fileID: 110252308}
-  - {fileID: 110294742}
-  - {fileID: 110266916}
+  - {fileID: 110252914}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110266916}
+      first: {fileID: 110252914}
       second: []
     data:
-      first: {fileID: 110294742}
-      second: []
-    data:
-      first: {fileID: 110252308}
+      first: {fileID: 0}
       second:
-      - {fileID: 110100858}
-      - {fileID: 110162070}
-    data:
-      first: {fileID: 110236128}
-      second:
-      - {fileID: 110190598}
-    data:
-      first: {fileID: 110203962}
-      second:
-      - {fileID: 110152760}
-      - {fileID: 110176022}
+      - {fileID: 110121826}
     data:
       first: {fileID: 110288910}
       second:
       - {fileID: 110127586}
       - {fileID: 110160972}
     data:
-      first: {fileID: 0}
+      first: {fileID: 110203962}
       second:
-      - {fileID: 110121826}
+      - {fileID: 110152760}
+      - {fileID: 110176022}
+    data:
+      first: {fileID: 110236128}
+      second:
+      - {fileID: 110190598}
+    data:
+      first: {fileID: 110252308}
+      second:
+      - {fileID: 110100858}
+      - {fileID: 110162070}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 312, y: -228, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

@@ -12,6 +12,8 @@ GameObject:
   - 61: {fileID: 6114468}
   - 50: {fileID: 5011502}
   - 114: {fileID: 11411502}
+  - 95: {fileID: 9505858}
+  - 114: {fileID: 11444000}
   m_Layer: 0
   m_Name: pref_sword
   m_TagString: Untagged
@@ -57,7 +59,34 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 5.4000001}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9505858
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177940}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13cdea8c64e2c7c4bbbcd9835617efe0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11411502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177940}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c21476f5ac77404a883b1f9ea1e06ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pickup: {fileID: 8300000, guid: e2ee603fc7ffcfa43a60b3af801216d3, type: 3}
+--- !u!114 &11444000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,10 +94,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 177940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c21476f5ac77404a883b1f9ea1e06ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pickup: {fileID: 8300000, guid: e2ee603fc7ffcfa43a60b3af801216d3, type: 3}
 --- !u!212 &21277940
 SpriteRenderer:
   m_ObjectHideFlags: 1
