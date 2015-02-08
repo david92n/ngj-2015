@@ -13,29 +13,43 @@ public class MessagePopup : MonoBehaviour
     [SerializeField]
     private string m_function;
 
-    private Text m_text;
+    public Text m_text;
     private bool m_insideTrigger = false;
+
+    private float m_timer;
 
     void Awake()
     {
         GameObject textObject = GameObject.FindGameObjectWithTag("MessagePopup");
-        if(textObject != null) m_text = textObject.GetComponent<Text>();
+        if(textObject != null) m_text = textObject.GetComponentInChildren<Text>();
+
+        m_timer = Time.time;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
-        if(m_text != null) m_text.text = m_message;
-        m_insideTrigger = true;
+        EnterTrigger();
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        EnterTrigger();
+
+        if (Time.time - m_timer > 1.0f)
+            ExitTrigger();
+
+        m_timer = Time.time;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
-        if (m_text != null) m_text.text = "";
-        m_insideTrigger = false;
+        ExitTrigger();
     }
 
     private void Update()
@@ -53,6 +67,28 @@ public class MessagePopup : MonoBehaviour
         }
     }
 
+    private void EnterTrigger()
+    {
+        if (m_text != null)
+        {
+            //m_text.transform.parent.gameObject.SetActive(true);
+            m_text.text = m_message;
+        }
+            
+        m_insideTrigger = true;
+    }
+
+    private void ExitTrigger()
+    {
+        if (m_text != null)
+        {
+            //m_text.transform.parent.gameObject.SetActive(false);
+            m_text.text = "";
+        }
+            
+        m_insideTrigger = false;
+    }
+
     private IEnumerator WinGame()
     {
         yield return new WaitForSeconds(0.5f);
@@ -62,5 +98,10 @@ public class MessagePopup : MonoBehaviour
             Destroy(objects[i]);
 
         Application.LoadLevelAsync(2);
+    }
+
+    void OnDestroy()
+    {
+        ExitTrigger();
     }
 }
