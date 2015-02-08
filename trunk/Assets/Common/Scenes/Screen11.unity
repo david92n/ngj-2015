@@ -501,6 +501,7 @@ MonoBehaviour:
   m_groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  m_jumpSound: {fileID: 8300000, guid: 63624fb5c83df824a8a8faa6329dacf2, type: 3}
 --- !u!50 &188993658
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -584,6 +585,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 11471894, guid: 963471688df94834da0568d73be80f63, type: 2}
+      propertyPath: m_jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 63624fb5c83df824a8a8faa6329dacf2, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 963471688df94834da0568d73be80f63, type: 2}
   m_RootGameObject: {fileID: 188993653}

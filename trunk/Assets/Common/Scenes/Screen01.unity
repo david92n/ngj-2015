@@ -304,10 +304,6 @@ Prefab:
       propertyPath: m_TagString
       value: Splatter
       objectReference: {fileID: 0}
-    - target: {fileID: 5002748, guid: 963471688df94834da0568d73be80f63, type: 2}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 19869662, guid: 963471688df94834da0568d73be80f63, type: 2}
       propertyPath: moveWithTransform
       value: 1
@@ -550,6 +546,7 @@ MonoBehaviour:
   m_groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  m_jumpSound: {fileID: 8300000, guid: 3f1855e50a6054943a816f526d546f84, type: 3}
 --- !u!50 &343867116
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -557,7 +554,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 216497013}
   m_GameObject: {fileID: 343867113}
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -2052,7 +2049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   intensity: 2.91000009
-  chromaticAberration: .200000003
+  chromaticAberration: .800000012
   axialAberration: .5
   blur: 0
   blurSpread: .75

@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private LayerMask m_groundLayers;
 
+    [SerializeField]
+    private AudioClip m_jumpSound;
+
 	private Animator m_animator;
 
 	private InputDirection m_inputDirection = InputDirection.IDLE;
@@ -118,6 +121,7 @@ public class PlayerController : MonoBehaviour
 		rigidbody2D.AddForce( new Vector2( -0.0f, m_jumpForce ) );
 		m_jumped = true;
 		m_animator.SetBool( "Jumped", m_jumped );
+        if(m_jumpSound != null) AudioSource.PlayClipAtPoint(m_jumpSound, Vector3.zero);
 	}
 
     void Update()

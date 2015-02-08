@@ -188,6 +188,7 @@ MonoBehaviour:
   m_groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  m_jumpSound: {fileID: 8300000, guid: 3f1855e50a6054943a816f526d546f84, type: 3}
 --- !u!198 &19869662
 ParticleSystem:
   m_ObjectHideFlags: 1
