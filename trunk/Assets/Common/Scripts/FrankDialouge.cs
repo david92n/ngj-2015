@@ -24,8 +24,7 @@ public class FrankDialouge : MonoBehaviour
             yield return new WaitForSeconds(4.0f);
         }
 
-		yield return new WaitForSeconds( 2.0f);
+		yield return new WaitForSeconds( 5.0f);
 	    Application.LoadLevelAsync("FinalEnding");
-
     }
 }
