@@ -61,11 +61,11 @@ Material:
       data:
         first:
           name: _col0
-        second: {r: 0, g: .376470596, b: .294117659, a: 0}
+        second: {r: .996078432, g: .870588243, b: .647058845, a: 0}
       data:
         first:
           name: _col1
-        second: {r: .0392156877, g: .596078455, b: .674509823, a: 1}
+        second: {r: .0392156653, g: .516781509, b: .674509823, a: 1}
       data:
         first:
           name: _col2
