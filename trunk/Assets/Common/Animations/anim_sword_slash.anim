@@ -207,7 +207,14 @@ AnimationClip:
     path: 
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: .13333334
+      value: {fileID: 8300000, guid: e2ee603fc7ffcfa43a60b3af801216d3, type: 3}
+    attribute: m_swishClip
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -227,7 +234,14 @@ AnimationClip:
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    - path: 0
+      attribute: 3253730847
+      script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
+      classID: 114
+      customType: 0
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 8300000, guid: e2ee603fc7ffcfa43a60b3af801216d3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
@@ -1107,4 +1121,11 @@ AnimationClip:
     path: 
     classID: 4
     script: {fileID: 0}
-  m_Events: []
+  m_Events:
+  - time: .0833333358
+    functionName: PlayStartSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
