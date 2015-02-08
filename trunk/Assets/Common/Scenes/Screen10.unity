@@ -86,6 +86,8 @@ GameObject:
   - 61: {fileID: 62194137}
   - 50: {fileID: 62194136}
   - 114: {fileID: 62194135}
+  - 95: {fileID: 62194140}
+  - 114: {fileID: 62194139}
   m_Layer: 0
   m_Name: pref_sword
   m_TagString: Untagged
@@ -112,7 +114,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 616125802}
   m_GameObject: {fileID: 62194133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c21476f5ac77404a883b1f9ea1e06ca, type: 3}
   m_Name: 
@@ -169,6 +171,34 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d31c757ffbe8efb409d0e1495a63b02f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &62194139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11444000, guid: dfc118909f17c8146a0382402bea6156,
+    type: 2}
+  m_PrefabInternal: {fileID: 616125802}
+  m_GameObject: {fileID: 62194133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &62194140
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9505858, guid: dfc118909f17c8146a0382402bea6156,
+    type: 2}
+  m_PrefabInternal: {fileID: 616125802}
+  m_GameObject: {fileID: 62194133}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13cdea8c64e2c7c4bbbcd9835617efe0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &104076854
 GameObject:
   m_ObjectHideFlags: 0
