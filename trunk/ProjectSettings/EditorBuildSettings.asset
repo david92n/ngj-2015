@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Common/Scenes/Screen04.unity
   - enabled: 1
     path: Assets/Common/Scenes/Screen05.unity
+  - enabled: 1
+    path: Assets/Common/Scenes/Screen06.unity
