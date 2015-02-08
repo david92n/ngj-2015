@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369c8a0c35abfbe489d0a2f6abfcf0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_splatter: {fileID: 0}
+  m_swishClip: {fileID: 0}
 --- !u!95 &62194140
 Animator:
   serializedVersion: 3
