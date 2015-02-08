@@ -7,8 +7,6 @@ public class FrankDialouge : MonoBehaviour
     [SerializeField]
     private Text m_textBox;
 
-	[SerializeField] private GameObject m_pressFtoWin;
-
     [SerializeField]
     private string[] m_strings;
 
@@ -24,6 +22,10 @@ public class FrankDialouge : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.F) && m_doneTalking)
 		{
+			GameObject[] objects = GameObject.FindGameObjectsWithTag( "DontDestroyOnLoad" );
+			for( int i = 0; i < objects.Length; ++i )
+				Destroy( objects[i] );
+
 			Application.LoadLevelAsync( "FinalEnding" );
 		}
 	}
