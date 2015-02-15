@@ -3,5 +3,5 @@ guid: 55290ccd22dc95246962f75f4ae6e312
 ShaderImporter:
   defaultTextures:
   - _MainTex: {instanceID: 0}
-  - _TintTex: {fileID: 2800000, guid: bb2553c74e4adf14d8b1d7567864ea8c, type: 3}
+  - _TintTex: {fileID: 2800000, guid: 0528146e3fd2e134aaeefce1287a383a, type: 3}
   userData: 
