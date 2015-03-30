@@ -41,7 +41,7 @@ public class YeeCursor : MonoBehaviour
         m_lastMousePos = Input.mousePosition;*/
 
         Cursor.visible = false;
-        
+
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos.z = 0.0f;
         transform.position = pos;
