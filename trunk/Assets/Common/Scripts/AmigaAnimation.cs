@@ -145,6 +145,7 @@ public class AmigaAnimation : MonoBehaviour
 
 	public void CocainumSprite()
 	{
+        transform.localScale = new Vector3(1.6f, 1.6f, 1.0f);
 		spriteRenderer.sprite = sprites[3];
 	}
 
