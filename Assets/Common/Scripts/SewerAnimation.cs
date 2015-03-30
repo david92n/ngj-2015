@@ -15,7 +15,7 @@ public class SewerAnimation : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        animation.Play();
+        GetComponent<Animation>().Play();
     }
 
     public void PlayStartSound()

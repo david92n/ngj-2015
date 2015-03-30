@@ -39,7 +39,8 @@ Shader "ImageEffect/PixelColorDistort"
 
 	half4 frag(v2f i) : SV_Target 
 	{
-		i.uv = vCrtCurvature(i.uv, cos(_Time.z * 5.0) * 0.1);
+		//i.uv = vCrtCurvature(i.uv, cos(_Time.z * 5.0) * 0.1);
+		i.uv = vCrtCurvature(i.uv, 0.1);
 
 		half4 color = tex2D(_MainTex, i.uv.xy);
 		
