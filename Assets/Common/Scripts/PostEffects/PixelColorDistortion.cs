@@ -7,6 +7,7 @@ using System.Collections;
 
 public class PixelColorDistortion :PostEffectsBase
 {
+	public float m_zoomInOutAmount = 0f;
 	public Shader m_pixelColorDistortionShader;
 	private Material m_pixelColorDistortionMat;
 
@@ -33,6 +34,7 @@ public class PixelColorDistortion :PostEffectsBase
 
 		//m_pixelColorDistortionMat.SetTexture("_TintText", m_tintTexture);
 		//m_pixelColorDistortionMat.SetFloat( "_Intensity", intensity );
+		m_pixelColorDistortionMat.SetFloat("_Zoom", m_zoomInOutAmount);
 		Graphics.Blit( source, destination, m_pixelColorDistortionMat );
 	}
 }

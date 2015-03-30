@@ -4,6 +4,7 @@ Shader "ImageEffect/PixelColorDistort"
 	{
 		_MainTex ("Base (RGB)", 2D) = "" {}
 		_TintTex ("Base (RGB)", 2D) = "" {}
+		_Zoom("Zoom in/out bounce", Float) = 0
 	}
 	// Shader code pasted into all further CGPROGRAM blocks
 	CGINCLUDE
@@ -19,6 +20,7 @@ Shader "ImageEffect/PixelColorDistort"
 	
 	sampler2D _MainTex;
 	sampler2D _TintTex;
+	float _Zoom;
 
 	v2f vert( appdata_img v ) 
 	{
@@ -39,8 +41,8 @@ Shader "ImageEffect/PixelColorDistort"
 
 	half4 frag(v2f i) : SV_Target 
 	{
-		//i.uv = vCrtCurvature(i.uv, cos(_Time.z * 5.0) * 0.1);
-		i.uv = vCrtCurvature(i.uv, 0.1);
+		i.uv = vCrtCurvature(i.uv, cos(_Time.z * 5.0) * 0.1 * _Zoom + 0.1);
+		//i.uv = vCrtCurvature(i.uv, 0.1);
 
 		half4 color = tex2D(_MainTex, i.uv.xy);
 		
