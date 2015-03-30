@@ -10,6 +10,10 @@ public class MenuSettings : MonoBehaviour
 
     public void QuitGame()
     {
+#if UNITY_WEBGL
+        Screen.fullScreen = false;
+#else
         Application.Quit();
+#endif
     }
 }
