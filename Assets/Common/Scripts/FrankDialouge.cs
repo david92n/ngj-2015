@@ -10,6 +10,9 @@ public class FrankDialouge : MonoBehaviour
     [SerializeField]
     private string[] m_strings;
 
+    [SerializeField]
+    private GameObject m_pressFObject = null;
+
 	private bool m_doneTalking = false;
 	
 	void Start () 
@@ -33,13 +36,15 @@ public class FrankDialouge : MonoBehaviour
     private IEnumerator StartDialouge()
     {
         int index = 0;
-        while(index < m_strings.Length)
+        m_textBox.text = m_strings[index++];
+        do
         {
+            yield return new WaitForSeconds(6.0f);
             m_textBox.text = m_strings[index++];
-            yield return new WaitForSeconds(4.0f);
         }
+        while (index < m_strings.Length);
 		m_doneTalking = true;
-		//yield return new WaitForSeconds( 5.0f);
-	    
+
+        if (m_pressFObject != null) Destroy(m_pressFObject);
     }
 }
