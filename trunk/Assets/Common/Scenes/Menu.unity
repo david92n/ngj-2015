@@ -531,6 +531,10 @@ Prefab:
       propertyPath: orthographic size
       value: 14.3999996
       objectReference: {fileID: 0}
+    - target: {fileID: 11462312, guid: c0626f260390a3448932fb7946b494f5, type: 2}
+      propertyPath: m_zoomInOutAmount
+      value: .100000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0626f260390a3448932fb7946b494f5, type: 2}
   m_IsPrefabParent: 0
