@@ -6,6 +6,6 @@ public class Boulder : MonoBehaviour
 	void Start()
 	{
 		print("Start");
-		rigidbody2D.AddForce(new Vector2(-120000, -100));
+		GetComponent<Rigidbody2D>().AddForce(new Vector2(-120000, -100));
 	}
 }

@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 		float move = GetHorizontalInput();
 
         //rigidbody2D.AddForce(new Vector2(move * m_speed, 0.0f) * Time.deltaTime, ForceMode2D.Force);
-        rigidbody2D.velocity = new Vector2(move * m_speed, rigidbody2D.velocity.y);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(move * m_speed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 	float GetHorizontalInput()
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
 	void Jump()
 	{
-		rigidbody2D.AddForce( new Vector2( -0.0f, m_jumpForce ) );
+		GetComponent<Rigidbody2D>().AddForce( new Vector2( -0.0f, m_jumpForce ) );
 		m_jumped = true;
 		m_animator.SetBool( "Jumped", m_jumped );
         if(m_jumpSound != null) AudioSource.PlayClipAtPoint(m_jumpSound, Vector3.zero);
@@ -139,8 +139,8 @@ public class PlayerController : MonoBehaviour
 	void UpdateAnimationVariables()
 	{
 		//m_animator.SetBool( "SwordPickup", false );
-		m_animator.SetFloat( "Velocity_Horizontal", rigidbody2D.velocity.x );
-		m_animator.SetFloat( "Velocity_Vertical", m_grounded ? 0.0f : rigidbody2D.velocity.y);
+		m_animator.SetFloat( "Velocity_Horizontal", GetComponent<Rigidbody2D>().velocity.x );
+		m_animator.SetFloat( "Velocity_Vertical", m_grounded ? 0.0f : GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
 	{
 		m_dying = true;
 		print( "Die" );
-		rigidbody2D.isKinematic = true;
+		GetComponent<Rigidbody2D>().isKinematic = true;
 		var psGO = gameObject.GetComponentInChildren<ParticleSystem>();
 		psGO.Play();
 

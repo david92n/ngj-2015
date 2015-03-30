@@ -26,9 +26,9 @@ public class AmigaAnimation : MonoBehaviour
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		Blank();
 		spriteRenderer.color = new Color(0.2627450980392157f, 0.2627450980392157f, 0.2627450980392157f);
-		audio.Play();
-		amiga_text.active = false;
-		amiga_cursor.active = false;
+		GetComponent<AudioSource>().Play();
+		amiga_text.gameObject.SetActive (false);
+		amiga_cursor.gameObject.SetActive (false);
 		Camera.main.backgroundColor = new Color(0, 0.3411764705882353f, 0.6862745098039216f);
 	}
 	public void Update()
@@ -36,11 +36,11 @@ public class AmigaAnimation : MonoBehaviour
 		if (start_cocainum)
 		{
 			Cocainum();
-			if (audio.time >= 1)
+			if (GetComponent<AudioSource>().time >= 1)
 			{
 				Camera.main.transform.position = new Vector3(0, 0, -10);
 				Camera.main.transform.localEulerAngles = Vector3.zero;
-				audio.Stop();
+				GetComponent<AudioSource>().Stop();
 				Application.LoadLevelAsync(1);
 			}
 			return;
@@ -70,44 +70,44 @@ public class AmigaAnimation : MonoBehaviour
 			{
 				col.a = 0;
 				start_cocainum = true;
-				audio.Stop();
-				audio.clip = cocainum_audio;
-				audio.Play();
-				cocainum_text.active = true;
+				GetComponent<AudioSource>().Stop();
+				GetComponent<AudioSource>().clip = cocainum_audio;
+				GetComponent<AudioSource>().Play();
+				cocainum_text.gameObject.SetActive(true);
 			}
 			sr.color = col;
 			return;
 		}
 
-		if (audio.time > times[0] - offsetValue && audio.time < times[0] + offsetValue)
+		if (GetComponent<AudioSource>().time > times[0] - offsetValue && GetComponent<AudioSource>().time < times[0] + offsetValue)
 			spriteRenderer.color = new Color(0.5333333333333333f, 0.5333333333333333f, 0.5333333333333333f);
-		else if (audio.time > times[1] - offsetValue && audio.time < times[1] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[1] - offsetValue && GetComponent<AudioSource>().time < times[1] + offsetValue)
 			spriteRenderer.color = Color.white;
-		else if (audio.time > times[2] - offsetValue && audio.time < times[2] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[2] - offsetValue && GetComponent<AudioSource>().time < times[2] + offsetValue)
 			Hand();
-		else if (audio.time > times[3] - offsetValue && audio.time < times[3] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[3] - offsetValue && GetComponent<AudioSource>().time < times[3] + offsetValue)
 			Blank();
-		else if (audio.time > times[4] - offsetValue && audio.time < times[4] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[4] - offsetValue && GetComponent<AudioSource>().time < times[4] + offsetValue)
 		{
-			amiga_text.active = true;
-			amiga_cursor.active = true;
+			amiga_text.gameObject.SetActive(true);
+			amiga_cursor.gameObject.SetActive(true);
 			Workspace();
 			Text1();
 		}
-		else if (audio.time > times[5] - offsetValue && audio.time < times[5] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[5] - offsetValue && GetComponent<AudioSource>().time < times[5] + offsetValue)
 		{
 			Text2();
 		}
-		else if (audio.time > times[6] - offsetValue && audio.time < times[6] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[6] - offsetValue && GetComponent<AudioSource>().time < times[6] + offsetValue)
 		{
 			Text3();
 		}
-		else if (audio.time > times[7] - offsetValue && audio.time < times[7] + offsetValue)
+		else if (GetComponent<AudioSource>().time > times[7] - offsetValue && GetComponent<AudioSource>().time < times[7] + offsetValue)
 		{
 			Camera.main.backgroundColor = new Color(0, 0, 0);
 
-			amiga_text.active = false;
-			amiga_cursor.active = false;
+			amiga_text.gameObject.SetActive(false);
+			amiga_cursor.gameObject.SetActive(false);
 			fadeout = true;
 			fadeTimer = Time.timeSinceLevelLoad;
 			SpriteRenderer sr = fade_texture.GetComponent<SpriteRenderer>();
@@ -120,12 +120,12 @@ public class AmigaAnimation : MonoBehaviour
 
 	public void PlayMusic()
 	{
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 	}
 
 	public void StopMusic()
 	{
-		audio.Stop();
+		GetComponent<AudioSource>().Stop();
 	}
 
 	public void Blank()
@@ -192,12 +192,12 @@ Bøgstugan detected. Deleting Bøgstugan. Starting Cocainum";
 
 	public void Cocainum()
 	{
-		Camera.main.transform.position = new Vector3(Random.RandomRange(-1.0f, 1) * audio.time, Random.RandomRange(-1.0f, 1)*audio.time, -10);
-		Camera.main.transform.localEulerAngles = new Vector3(0, 0, Random.RandomRange(-1.0f, 1) * audio.time);
+		Camera.main.transform.position = new Vector3(Random.RandomRange(-1.0f, 1) * GetComponent<AudioSource>().time, Random.RandomRange(-1.0f, 1)*GetComponent<AudioSource>().time, -10);
+		Camera.main.transform.localEulerAngles = new Vector3(0, 0, Random.RandomRange(-1.0f, 1) * GetComponent<AudioSource>().time);
 		if (cocainTimer < Time.timeSinceLevelLoad)
 		{
 			cocainTimer = Time.timeSinceLevelLoad + 0.05f;
-			cocainum_text.active = !cocainum_text.active;
+			cocainum_text.gameObject.SetActive(!cocainum_text.gameObject.activeSelf);
 		}
 	}
 }

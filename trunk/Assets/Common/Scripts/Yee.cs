@@ -12,7 +12,7 @@ public class Yee : MonoBehaviour
 
 	public void PlaySound()
     {
-        audio.Play();
+        GetComponent<AudioSource>().Play();
         Sprite old = m_sprite.sprite;
         m_sprite.sprite = m_yee;
         

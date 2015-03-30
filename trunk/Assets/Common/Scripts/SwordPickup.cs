@@ -10,11 +10,11 @@ public class SwordPickup : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
 			{
-				rigidbody2D.isKinematic = false;
-				collider2D.isTrigger = false;
+				GetComponent<Rigidbody2D>().isKinematic = false;
+				GetComponent<Collider2D>().isTrigger = false;
 				transform.parent = null;
-				rigidbody2D.active = true;
-				rigidbody2D.AddForce(new Vector3(10,10,0));
+				GetComponent<Rigidbody2D>().gameObject.SetActive(true);
+				GetComponent<Rigidbody2D>().AddForce(new Vector3(10,10,0));
 			}
 		}
 	}
@@ -23,12 +23,12 @@ public class SwordPickup : MonoBehaviour
 	{
 		if (collider.tag != "Player")
 		{
-			rigidbody2D.isKinematic = true;
-			collider2D.isTrigger = true;
+			GetComponent<Rigidbody2D>().isKinematic = true;
+			GetComponent<Collider2D>().isTrigger = true;
 			return;
 		}
 
-		rigidbody2D.isKinematic  = true;
+		GetComponent<Rigidbody2D>().isKinematic  = true;
 		transform.parent = collider.transform;
 		if(collider.transform.localScale.x > 0)
 			transform.position = collider.transform.position + new Vector3(-3, 2, 0);
